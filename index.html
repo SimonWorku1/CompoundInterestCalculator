@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <article>
+      <header>
+        <div>💰</div>
+        <div>Interest Calculator</div>
+        <div>💸</div>
+      </header>
+      <main>
+        <form>
+          <div class="input_text">Principal</div>
+          <input
+            id="principal"
+            type="number"
+            placeholder="Enter principal amount"
+          />
+          <div class="input_text">Period</div>
+          <select id="period">
+            <option value="1">Yearly</option>
+            <option value="4">Quarterly</option>
+            <option value="12">Monthly</option>
+            <option value="365">Daily</option>
+          </select>
+          <div class="input_text">APR (%)</div>
+          <input
+            type="range"
+            id="aprSlider"
+            value="2"
+            min="0.25"
+            max="25"
+            step="0.25"
+          />
+          <output class="input_text" id="aprValue">2</output>%
+          <div class="input_text">Years</div>
+          <input type="number" id="years" placeholder="Enter number of years" />
+        </form>
+
+        <!-- Button to trigger the calculation -->
+        <button class="button" onClick="calculateInterest()">
+          Calculate Interest
+        </button>
+
+        <!-- Display the result -->
+        <p class="input_text">
+          Accumulated Amount: <output id="accumulated"></output>
+        </p>
+      </main>
+
+      <footer>
+        <div>© 2024</div>
+        <div>SimonWorku Studios</div>
+      </footer>
+    </article>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
